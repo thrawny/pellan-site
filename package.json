@@ -1,0 +1,30 @@
+{
+  "name": "thrawny-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "my site and blog",
+  "main": "server/app.js",
+  "scripts": {
+    "start": "node server/app.js"
+  },
+  "author": "Jonas Lergell",
+  "dependencies": {
+    "body-parser": "~1.0.0",
+    "compression": "^1.0.11",
+    "cookie-parser": "~1.0.1",
+    "debug": "~0.7.4",
+    "errorhandler": "^1.1.1",
+    "express": "~4.2.0",
+    "grunt": "^0.4.5",
+    "jade": "~1.3.0",
+    "method-override": "^2.1.3",
+    "morgan": "~1.0.0",
+    "static-favicon": "~1.0.0"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.4",
+    "grunt-contrib-jade": "^0.12.0",
+    "grunt-contrib-sass": "^0.7.4",
+    "grunt-contrib-watch": "^0.6.1"
+  }
+}
