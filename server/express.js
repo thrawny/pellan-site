@@ -18,6 +18,8 @@ var path = require('path');
 module.exports = function(app) {
   var env = app.get('env');
 
+  var root = path.normalize(__dirname + '/..');
+
   app.set('views', '../' + '/server/views');
   app.set('view engine', 'jade');
   app.use(compression());
@@ -35,8 +37,8 @@ module.exports = function(app) {
 
   if ('development' === env || 'test' === env) {
     //app.use(require('connect-livereload')());
-    app.use(express.static(path.join('../', '.tmp')));
-    app.use(express.static(path.join('../', 'public')));
+    app.use(express.static(path.join(root, '.tmp')));
+    app.use(express.static(path.join(root, 'public')));
     app.set('appPath', 'public');
     app.use(morgan('dev'));
     app.use(errorHandler()); // Error handler - has to be last

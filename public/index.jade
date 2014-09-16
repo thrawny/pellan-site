@@ -1,1 +1,14 @@
-h1 Testing
+doctype html
+html(ng-app='thrawnyApp')
+  head
+    title thrawny blog
+    link(rel='stylesheet', href='app/app.css')
+  body
+    h1 Testing
+    div(ng-view='')
+    script(src='bower_components/angular/angular.js')
+    script(src='bower_components/angular-route/angular-route.js')
+    script(src='bower_components/angular-sanitize/angular-sanitize.js')
+    script(src='app/app.js')
+    script(src='app/home/home.js')
+    script(src='app/home/home.controller.js')
