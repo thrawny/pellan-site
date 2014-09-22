@@ -40,6 +40,7 @@ module.exports = function(app) {
     app.use(express.static(path.join(root, '.tmp')));
     app.use(express.static(path.join(root, 'public')));
     app.set('appPath', 'public');
+    app.set('root', root);
     app.use(morgan('dev'));
     app.use(errorHandler()); // Error handler - has to be last
   }

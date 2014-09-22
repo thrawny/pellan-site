@@ -3,6 +3,7 @@
 angular.module('thrawnyApp', [
   'ngSanitize',
   'ngRoute',
+  'ngAnimate'
 ])
   .config(function ($routeProvider, $locationProvider) {
     $routeProvider
@@ -10,5 +11,5 @@ angular.module('thrawnyApp', [
         redirectTo: '/'
       });
 
-    $locationProvider.html5Mode(true);
+    $locationProvider.html5Mode(false);
   });

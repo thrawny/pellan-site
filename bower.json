@@ -7,8 +7,9 @@
   "description": "my blog",
   "private": true,
   "dependencies": {
-    "angular": "~1.2.21",
-    "angular-route": "~1.2.21",
-    "angular-sanitize": "~1.2.21"
+    "angular": "~1.2.25",
+    "angular-route": "~1.2.25",
+    "angular-sanitize": "~1.2.25",
+    "angular-animate": "~1.2.25"
   }
 }
