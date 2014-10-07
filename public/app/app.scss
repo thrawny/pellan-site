@@ -7,9 +7,12 @@
 }
 .container {
     @include display-flex;
-    //@include flex-flow(column wrap);
     max-width: 960px;
     margin: 0 auto;
+
+    @media (max-width: 700px) {
+        @include flex-flow(column wrap);
+    }
 }
 
 .nav {
@@ -17,10 +20,15 @@
     width: 140px;
     ul {
         list-style-type: none;
-        -webkit-padding-start: 0;
         padding: 10px;
     }
     background-color: #f3f3f3;
+
+    @media (max-width: 700px) {
+        @include flex-flow(column wrap);
+        @include order(0);
+        width: 100%;
+    }
 
 }
 
@@ -30,11 +38,16 @@
     width: 100%;
 }
 
+.mainpost {
+    background-color: white;
+    margin: 10px;
+}
+
 
 .ng-enter {
 
 }
 
 .ng-leave {
-    
+
 }

@@ -1,4 +1,7 @@
 h3 Posts!!
-ul
-  li(ng-repeat="post in posts")
-    a(ng-href="/#/post/{{post.path}}") {{post.title}}
+//- ul
+//-   li(ng-repeat="post in posts")
+//-     a(ng-href="/#/post/{{post.path}}") {{post.title}}
+div.mainpost(ng-repeat="post in posts")
+  h3 {{post.title}}
+  div(ng-bind-html="post.body()") 

@@ -27,6 +27,6 @@ module.exports.list = function (req, res) {
       list.push( { 'title': title, 'date': date, 'path': name } );
     });
 
-    res.json(list);
+    res.json(list.reverse());
   });
 }
