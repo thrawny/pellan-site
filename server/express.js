@@ -13,7 +13,6 @@ var methodOverride = require('method-override');
 var cookieParser = require('cookie-parser');
 var errorHandler = require('errorhandler');
 var path = require('path');
-//var config = require('./environment');
 
 module.exports = function(app) {
   var env = app.get('env');
@@ -31,18 +30,14 @@ module.exports = function(app) {
   if ('production' === env) {
     app.use(favicon(path.join(config.root, 'dist', 'favicon.ico')));
     app.use(express.static(path.join(config.root, 'dist')));
-    app.set('appPath', config.root + '/dist');
+    app.set('appPath', root + '/dist');
     app.use(morgan('dev'));
   }
 
   if ('development' === env || 'test' === env) {
-    //app.use(require('connect-livereload')());
-
-    app.use(express.static(path.join(root, '.tmp')));
+    app.use(express.static(path.join(root, 'dist')));
     app.use(express.static(path.join(root, 'public')));
-
-    app.set('appPath', 'public');
-    app.set('root', root);
+    app.set('appPath', root + '/dist');
     app.use(morgan('dev'));
     app.use(errorHandler()); // Error handler - has to be last
   }

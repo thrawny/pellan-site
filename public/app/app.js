@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('thrawnyApp', [
+angular.module('pellanApp', [
   'ngSanitize',
   'ngRoute',
   'ngAnimate'

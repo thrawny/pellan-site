@@ -1,8 +1,7 @@
 node_modules
-.tmp
+public
 .sass-cache
 public/bower_components
 dist
 /server/config/local.env.js
-/posts
 *.log

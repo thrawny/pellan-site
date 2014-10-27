@@ -1,8 +1,7 @@
 {
-  "name": "thrawny-site",
+  "name": "pellan-site",
   "version": "1.0.0",
   "private": true,
-  "description": "my site and blog",
   "main": "server/app.js",
   "scripts": {
     "start": "node server/app.js"

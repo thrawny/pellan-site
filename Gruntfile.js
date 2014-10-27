@@ -39,7 +39,7 @@ module.exports = function(grunt) {
           expand: true,
           cwd: 'public',
           src: '**/*.jade',
-          dest: '.tmp',
+          dest: 'dist',
           ext: '.html'
         }]
       }
@@ -50,7 +50,7 @@ module.exports = function(grunt) {
         options: {
           watch: true,
           sassDir: 'public/app',
-          cssDir: '.tmp/app'
+          cssDir: 'dist/app'
         }
       }
     }

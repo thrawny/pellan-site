@@ -1,53 +1,88 @@
-@import "compass/css3/flexbox";
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,700);
+@import url(http://fonts.googleapis.com/css?family=Parisienne|Petit+Formal+Script|Lobster|Julius+Sans+One|Love+Ya+Like+A+Sister);
 @import "compass/css3/box-sizing";
-@import "compass/css3/transition";
+@import "compass/css3/flexbox";
+@import "compass/css3/border-radius";
 
 * {
-    @include box-sizing(border-box);
+  margin: 0;
+  padding: 0;
+  @include box-sizing(border-box);
 }
+
+a {
+    text-decoration: none;
+}
+
+body {
+  font-family: 'Open Sans';
+  font-size: 1em;
+}
+
 .container {
+  @include display-flex;
+  @include flex-flow(column wrap);
+  
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+.header {
+  padding: 1em 0.5em;
+  width: 100%;
+  margin-bottom: 5em;
+}
+
+.home-nav {  
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
     @include display-flex;
-    max-width: 960px;
-    margin: 0 auto;
-
-    @media (max-width: 700px) {
-        @include flex-flow(column wrap);
-    }
+    @include flex-flow(row wrap);
+    @include justify-content(space-around);
+  }
+  
+  li {
+    transition: all 0.5s ease;
+    flex-basis: 200px; 
+  }
+  
+  li:hover {
+    flex-basis: 250px;
+  }
 }
 
-.nav {
-    @include order(1);
-    width: 140px;
-    ul {
-        list-style-type: none;
-        padding: 10px;
-    }
-    background-color: #f3f3f3;
+.circle {
+  background-color: #c97286;
+  @include border-radius(100%);
+  text-align: center;
+  display: block;
+  height: 0;
+  width: 100%;
+  padding: 50% 0;
+}  
 
-    @media (max-width: 700px) {
-        @include flex-flow(column wrap);
-        @include order(0);
-        width: 100%;
-    }
-
+.about {
+  color: white;
+  background-color: #62313c
 }
 
-.content {
-    @include flex(1);
-    background-color: #d3d3d3;
-    width: 100%;
+.cv{
+  color: white;
+  background-color: #9c4f60;
 }
 
-.mainpost {
-    background-color: white;
-    margin: 10px;
+.portfolio{
+  color: white;
+  background-color: #c97286
 }
 
-
-.ng-enter {
-
+.contact{  
+  color: white;
+  background-color: #e1b1bc
 }
 
-.ng-leave {
-
+h1 {
+    font-family: Julius Sans One;
 }
