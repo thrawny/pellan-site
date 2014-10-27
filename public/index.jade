@@ -7,9 +7,13 @@ html(ng-app='pellanApp')
   body
     .container(ng-controller="MainCtrl as main")
       header.header(role="banner")
-        h1 Sofia Pellgård
+        h1 
+          a(href="/") Sofia Pellgård
         div(ng-include="$route.current.controller !== 'HomeCtrl' ? '/app/partials/_nav.html' : null")
       div(ng-view)
+      footer
+        span Footen
+
      
     script(src='libs/angular/angular.js')
     script(src='libs/angular-route/angular-route.js')

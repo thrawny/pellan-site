@@ -12,17 +12,18 @@
 
 a {
     text-decoration: none;
+    color: black;
 }
 
 body {
   font-family: 'Open Sans';
   font-size: 1em;
+  background-color: #FCF7F8;
 }
 
 .container {
   @include display-flex;
-  @include flex-flow(column wrap);
-  
+  @include flex-flow(column wrap); 
   margin: 0 auto;
   max-width: 1000px;
 }
@@ -30,10 +31,30 @@ body {
 .header {
   padding: 1em 0.5em;
   width: 100%;
-  margin-bottom: 5em;
+  @include display-flex;
+  @include flex-flow(row wrap);
+  @include justify-content(space-between);
+}
+
+h1 {
+    font-family: Julius Sans One;
+    font-size: 50px;
+}
+
+.main-nav {
+    list-style: none;
+    li {
+      display: inline;
+      padding-right: 10px;
+    }
+}
+
+nav {
+  height: 500px;
 }
 
 .home-nav {  
+  margin-top: 10em;
   ul {
     padding: 0;
     margin: 0;
@@ -45,7 +66,7 @@ body {
   
   li {
     transition: all 0.5s ease;
-    flex-basis: 200px; 
+    flex-basis: 220px; 
   }
   
   li:hover {
@@ -54,8 +75,8 @@ body {
 }
 
 .circle {
-  background-color: #c97286;
   @include border-radius(100%);
+  background-color: #c97286;
   text-align: center;
   display: block;
   height: 0;
@@ -63,17 +84,17 @@ body {
   padding: 50% 0;
 }  
 
-.about {
+.cv {
   color: white;
   background-color: #62313c
 }
 
-.cv{
+.portfolio{
   color: white;
   background-color: #9c4f60;
 }
 
-.portfolio{
+.about{
   color: white;
   background-color: #c97286
 }
@@ -83,6 +104,4 @@ body {
   background-color: #e1b1bc
 }
 
-h1 {
-    font-family: Julius Sans One;
-}
+
