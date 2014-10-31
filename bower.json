@@ -8,8 +8,9 @@
   "private": true,
   "dependencies": {
     "angular": "~1.2.25",
-    "angular-route": "~1.2.25",
     "angular-sanitize": "~1.2.25",
-    "angular-animate": "~1.2.25"
+    "angular-animate": "~1.2.25",
+    "ui-router": "~0.2.11",
+    "font-awesome": "~4.2.0"
   }
 }

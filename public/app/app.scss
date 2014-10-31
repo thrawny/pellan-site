@@ -1,79 +1,117 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,700);
 @import url(http://fonts.googleapis.com/css?family=Parisienne|Petit+Formal+Script|Lobster|Julius+Sans+One|Love+Ya+Like+A+Sister);
+@import url(http://fonts.googleapis.com/css?family=Fredericka+the+Great|Satisfy|Abril+Fatface|Pinyon+Script|Playfair+Display+SC);
 @import "compass/css3/box-sizing";
 @import "compass/css3/flexbox";
 @import "compass/css3/border-radius";
-
+$page-width: 1200px;
+$dark-pink: #62313c;
 * {
-  margin: 0;
-  padding: 0;
   @include box-sizing(border-box);
 }
-
 a {
-    text-decoration: none;
-    color: black;
+  text-decoration: none;
+  color: black;
+}
+p a {
+  text-decoration: underline;
+}
+p a:hover, footer a:hover {
+  color: $dark-pink;
 }
 
 body {
-  font-family: 'Open Sans';
-  font-size: 1em;
-  background-color: #FCF7F8;
-}
-
-.container {
   @include display-flex;
-  @include flex-flow(column wrap); 
+  @include flex-direction(column);
   margin: 0 auto;
-  max-width: 1000px;
-}
+  padding-left: 3em;
+  padding-right: 3em;
+  min-height: 100vh;
+  font-family: 'Open Sans';
+  background-image: url(/pics/subtle_grunge.png);
+  max-width: $page-width;
 
+  header, footer, .container {
+    width: 100%;  
+  }
+}
+.container {
+  @include flex(1);
+}
 .header {
-  padding: 1em 0.5em;
-  width: 100%;
   @include display-flex;
-  @include flex-flow(row wrap);
+  @include flex-flow(row);
   @include justify-content(space-between);
+  margin-top: 3em;
+  margin-bottom: 1.5em;
 }
-
 h1 {
-    font-family: Julius Sans One;
-    font-size: 50px;
+  font-family: Abril Fatface;
+  font-size: 3em;
+  margin: 0;
 }
-
+h2 {
+  color: #62313c;
+}
+footer {
+  @include display-flex;
+  @include justify-content(flex-end);
+  padding-top: 1em;
+  padding-bottom: 1em;
+  margin: 0 auto;
+  
+  font-size: 3em;
+  a {
+    margin: 0.15em;
+  }
+  
+}
 .main-nav {
-    list-style: none;
-    li {
-      display: inline;
-      padding-right: 10px;
-    }
+  list-style: none;
+  li {
+    display: inline;
+    padding-right: 10px;
+    text-transform: uppercase;
+  }
 }
 
-nav {
-  height: 500px;
-}
-
-.home-nav {  
-  margin-top: 10em;
+.home-nav {
+  margin-top: 6em;
   ul {
+    @include display-flex;
+    @include flex-flow(row wrap);
     padding: 0;
     margin: 0;
     list-style: none;
-    @include display-flex;
-    @include flex-flow(row wrap);
-    @include justify-content(space-around);
   }
-  
   li {
     transition: all 0.5s ease;
-    flex-basis: 220px; 
+  }
+  @media screen and (min-width: 769px) {
+    ul {
+      @include justify-content(space-between);
+    }
+    li {
+      width: 20%;
+    }
+    li:hover {
+      width: 25%;
+    }  
+  }
+  @media screen and (max-width: 768px) {
+    ul {
+     @include justify-content(space-around); 
+    }
+    li {
+      width: 200px;
+      
+    }
+    li:hover {
+      width: 250px;
+    }  
   }
   
-  li:hover {
-    flex-basis: 250px;
-  }
 }
-
 .circle {
   @include border-radius(100%);
   background-color: #c97286;
@@ -82,26 +120,29 @@ nav {
   height: 0;
   width: 100%;
   padding: 50% 0;
-}  
-
-.cv {
   color: white;
+  text-transform: uppercase;
+}
+.cv {
   background-color: #62313c
 }
-
-.portfolio{
-  color: white;
+.portfolio {
   background-color: #9c4f60;
 }
-
-.about{
-  color: white;
+.about {
   background-color: #c97286
 }
-
-.contact{  
-  color: white;
-  background-color: #e1b1bc
+.contact {
+  background-color: #cda7a7 
 }
-
-
+.contact-form {
+  input {
+    width: 250px;
+  }
+  button {
+  }
+  textarea {
+    height: 150px;
+    width: 400px;
+  }
+}

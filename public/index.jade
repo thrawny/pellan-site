@@ -3,22 +3,31 @@ html(ng-app='pellanApp')
   head
     title sofiapellgard.se
     link(rel='stylesheet', href='app/app.css')
+    link(rel='stylesheet', href='libs/font-awesome/css/font-awesome.min.css')
     base(href="/")
-  body
-    .container(ng-controller="MainCtrl as main")
-      header.header(role="banner")
-        h1 
-          a(href="/") Sofia Pellgård
-        div(ng-include="$route.current.controller !== 'HomeCtrl' ? '/app/partials/_nav.html' : null")
-      div(ng-view)
-      footer
-        span Footen
+  body(ng-controller="MainCtrl as main")
+    header.header(role="banner")
+      h1 
+        a(ui-sref="index") Sofia Pellgård
+      div(ng-include="$state.current.name !== 'index' ? '/app/partials/_nav.html' : null")
+    .container(ui-view)
+    footer
+      a(href="http://www.facebook.com/sofia.pellgard")
+        i.fa.fa-facebook-square
+      a(href="http://se.linkedin.com/in/sofiapellgard/")
+        i.fa.fa-linkedin-square
+      a(href="http://instagram.com/pewz")
+        i.fa.fa-instagram
+      a(href="http://se.pinterest.com/sofiapellan/")
+        i.fa.fa-pinterest-square
+      
 
      
     script(src='libs/angular/angular.js')
-    script(src='libs/angular-route/angular-route.js')
+    script(src='libs/ui-router/release/angular-ui-router.js')
     script(src='libs/angular-sanitize/angular-sanitize.js')
     script(src='libs/angular-animate/angular-animate.js')
+
     script(src='app/app.js')
     script(src='app/main/main.controller.js')  
     script(src='app/home/home.js')
@@ -31,3 +40,4 @@ html(ng-app='pellanApp')
     script(src='app/portfolio/portfolio.controller.js')
     script(src='app/about/about.js')
     script(src='app/about/about.controller.js')
+
