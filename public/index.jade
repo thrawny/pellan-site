@@ -10,15 +10,17 @@ html(ng-app='pellanApp')
       h1 
         a(ui-sref="index") Sofia Pellgård
       div(ng-include="$state.current.name !== 'index' ? '/app/partials/_nav.html' : null")
+      div.intern(ng-if="$state.current.name === 'index'" ui-sref="intern")
+         span Just nu söker jag praktik inför våren 2015!
     .container(ui-view)
     footer
-      a(href="http://www.facebook.com/sofia.pellgard")
+      a(href="http://www.facebook.com/sofia.pellgard" target="_blank")
         i.fa.fa-facebook-square
-      a(href="http://se.linkedin.com/in/sofiapellgard/")
+      a(href="http://se.linkedin.com/in/sofiapellgard/" target="_blank")
         i.fa.fa-linkedin-square
-      a(href="http://instagram.com/pewz")
+      a(href="http://instagram.com/pewz" target="_blank")
         i.fa.fa-instagram
-      a(href="http://se.pinterest.com/sofiapellan/")
+      a(href="http://se.pinterest.com/sofiapellan/" target="_blank")
         i.fa.fa-pinterest-square
       
 
@@ -40,4 +42,5 @@ html(ng-app='pellanApp')
     script(src='app/portfolio/portfolio.controller.js')
     script(src='app/about/about.js')
     script(src='app/about/about.controller.js')
-
+    script(src='app/intern/intern.js')
+    script(src='app/intern/intern.controller.js')

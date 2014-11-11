@@ -1,8 +1,9 @@
 var nodemailer = require('nodemailer');
+var password = require('./config').password;
 
 module.exports = function(req, res, next) {
 
-  if (req.body.from === undefined || req.body.message === undefined ) {
+  if (req.body.name === '' || req.body.email === '' || req.body.message === '' ) {
       console.log(req.body);
      return res.json({ result: "error" });
   }
@@ -11,14 +12,14 @@ module.exports = function(req, res, next) {
       service: 'gmail',
       auth: {
           user: 'pellan.web@gmail.com',
-          pass: 'M2djHApZy2QMsM'
+          pass: password
       }
     });
     transporter.sendMail({
-        from: req.body.from,
+        from: req.body.email,
         to: 'jonaslergell@gmail.com',
         subject: 'contact form sofiapellgard.se',
-        text: req.body.from + '\n' + req.body.message
+        text: req.body.email + '\n' + req.body.message
     }, function(err, info) {
       if(err) {
         return res.json(err);
