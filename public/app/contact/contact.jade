@@ -1,0 +1,18 @@
+h2 Kontakt
+p Skriv i nedanstående formulär för att komma i kontakt med mig. Det går också bra att skriva till mig på Facebook eller Linkedin. Länkar finns längst ner i hörnet.
+
+form.contact-form(name="form" novalidate)
+  .response(ng-show="submitted" ng-class="submitStatus") {{response}}
+
+  div
+    div Namn:
+    input(type="text" name="name" ng-model="contact.name" required)
+  div
+    div Email:
+    input(type="email" name="email" ng-model="contact.email" required)
+  div
+    div Meddelande:
+    textarea(name="message" ng-model="contact.message" required)
+  div
+    button(ng-click="submit(form)") Skicka
+

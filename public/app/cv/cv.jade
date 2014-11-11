@@ -1,0 +1,33 @@
+h2 CV
+
+.cv-container
+  h3 Anställningar
+  ul
+    li(ng-repeat="item in cv.exp")
+      h4(ng-click="toggle=!toggle") 
+        i.fa(ng-class="{'fa-caret-right': !toggle, 'fa-caret-down': toggle}")
+        span(ng-bind-html="item.title | strong")
+      div(ng-show="toggle") {{item.text}}
+  h3 Utbildning
+  ul
+    li(ng-repeat="item in cv.edu")
+      h4(ng-click="toggle=!toggle" ng-class="{'no-text': !item.text}")
+        span(ng-show="item.text")
+          i.fa(ng-class="{'fa-caret-right': !toggle, 'fa-caret-down': toggle}")
+        span(ng-bind-html="item.title | strong")
+      div(ng-show="toggle") {{item.text}}
+
+  h3 Övrigt
+  ul
+    li 
+      div 
+        p Jag har arbetat på många festivaler och musikevenemang, här är ett urplock:
+  
+    li(ng-repeat="item in cv.other")
+      h4(ng-click="toggle=!toggle") 
+        i.fa(ng-class="{'fa-caret-right': !toggle, 'fa-caret-down': toggle}")
+        span(ng-bind-html="item.title | strong")
+      div(ng-show="toggle") {{item.text}}
+    li 
+      div 
+        p Vidare har jag varit sekreterare för Svenska Kyrkans ungdomskör i Djura församling och vice sekreterare för arrangörsgruppen Groupie i Hultsfred.
