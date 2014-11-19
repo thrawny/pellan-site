@@ -50,7 +50,7 @@ body {
       }
     }
     .container {
-      padding: 1em;
+      // padding: 1em;
       @include border-radius(0px);
     }
     footer {
@@ -86,10 +86,6 @@ body {
   @media screen and (max-width: 769px) {
     @include flex-flow(row wrap);
     @include justify-content(space-around);
-    div.intern {
-      margin-top: 1em;
-    }
-
   }
 }
 h1 {
@@ -146,7 +142,7 @@ ul.main-nav {
   margin-top: 7em;
   ul {
     @include display-flex;
-    @include flex-flow(row wrap);
+    
     padding: 0;
     margin: 0;
     list-style: none;
@@ -155,6 +151,7 @@ ul.main-nav {
   @media screen and (min-width: 769px) {
     ul {
       @include justify-content(space-between);
+      @include flex-flow(row wrap);
     }
     li {
       width: 20%;
@@ -163,11 +160,14 @@ ul.main-nav {
   @media screen and (max-width: 768px) {
     ul {
      @include justify-content(space-around); 
+     @include flex-flow(column wrap);
     }
     li {
       width: 20%;
       min-width: 150px;
-      margin: 1em;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 1em;
       
     }
     margin-top: 0;
