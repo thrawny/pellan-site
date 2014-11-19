@@ -1,4 +1,4 @@
-h2 Kontakt
+h2.top Kontakt
 p Skriv i nedanstående formulär för att komma i kontakt med mig. Det går också bra att skriva till mig på Facebook eller Linkedin. Länkar finns längst ner i hörnet.
 
 form.contact-form(name="form" novalidate)
@@ -10,7 +10,7 @@ form.contact-form(name="form" novalidate)
   div
     div Email:
     input(type="email" name="email" ng-model="contact.email" required)
-  div
+  div.contact-textarea
     div Meddelande:
     textarea(name="message" ng-model="contact.message" required)
   div

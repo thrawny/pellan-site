@@ -11,18 +11,23 @@ html(ng-app='pellanApp')
         a(ui-sref="index") Sofia Pellgård
       div(ng-include="$state.current.name !== 'index' ? '/app/partials/_nav.html' : null")
       div.intern(ng-if="$state.current.name === 'index'" ui-sref="intern")
-         span Just nu söker jag praktik inför våren 2015!
-    .container(ui-view)
+         span Praktikplats sökes för våren 2015!
+    .container(ng-class=" { 'home-page': $state.current.name === 'index'} " ui-view)
     footer
-      a(href="http://www.facebook.com/sofia.pellgard" target="_blank")
-        i.fa.fa-facebook-square
-      a(href="http://se.linkedin.com/in/sofiapellgard/" target="_blank")
-        i.fa.fa-linkedin-square
-      a(href="http://instagram.com/pewz" target="_blank")
-        i.fa.fa-instagram
-      a(href="http://se.pinterest.com/sofiapellan/" target="_blank")
-        i.fa.fa-pinterest-square
-      
+
+
+      .copy &copy; 2014 Sofia Pellgård
+      .social
+        a(href="http://www.facebook.com/sofia.pellgard" target="_blank")
+          i.fa.fa-facebook-square
+        a(href="http://se.linkedin.com/in/sofiapellgard/" target="_blank")
+          i.fa.fa-linkedin-square
+        a(href="http://instagram.com/pewz" target="_blank")
+          i.fa.fa-instagram
+        a(href="http://se.pinterest.com/sofiapellan/" target="_blank")
+          i.fa.fa-pinterest-square
+        a(href="http://open.spotify.com/user/pewllan" target="_blank")
+          i.fa.fa-spotify
 
      
     script(src='libs/angular/angular.js')

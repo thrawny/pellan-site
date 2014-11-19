@@ -11,11 +11,11 @@ angular.module('pellanApp')
 
         {
           title: "Skribent, Rockfoto.nu, maj 2013 - nuvarande",
-          text: "Skriver musikrelaterade recensioner, artiklar och intervjuer som publiceras för Rockfotos nätmagasin. Här finner ni några av mina texter: http://rockfoto.nu/about/sofia-pellgard "
+          text: "Skriver musikrelaterade recensioner, artiklar och intervjuer som publiceras för Rockfotos nätmagasin. Här finner ni några av mina texter: <a href='http://rockfoto.nu/about/sofia-pellgard' target='_blank'>rockfoto.nu</a>"
         },
 
         {
-          title: "Praktikant, AdWords, Be Better Online, Göteborg april-juni 2014",
+          title: "Praktikant: AdWords & SEM, Be Better Online, Göteborg april-juni 2014",
           text: "Praktikant på den digitala marknadsföringsbyrån Be Better Online i Göteborg. Jobbade med AdWords-annonsering, d.v.s. skrev annonser, skapade annonskampanjer, estimerade annonsbudgetar, analyserade pågående kampanjer och landningssidor. "
         },
 
@@ -30,8 +30,8 @@ angular.module('pellanApp')
         },
 
         {
-          title: "Event agent, Why Us Nordic AB, Göteborg oktober - december 2012",
-          text: "Eventsäljare för projektet E.ON där jag sålde elabonnemang. Utfördes på resande fot runt om i Västsverige."
+          title: "Event agent, Why Us Nordic AB, Göteborg oktober-december 2012",
+          text: "Eventsäljare för projektet E.ON. Utfördes på resande fot runt om i Västsverige."
         },
 
         {
@@ -40,34 +40,56 @@ angular.module('pellanApp')
         },
 
         {
-          title: "Bolagsman och marknadsföringsansvarig, 5th Square Management HB, Kalmar maj 2010-november 2011",
+          title: "Bolagsman och marknadsföringsansvarig, 5th Square Management HB, maj 2010-november 2011",
           text: "Artist management-bolag vilket jag drev med fyra andra studenter. Vi arbetade under tiden med diverse klienter, bland annat popbandet The Majority Says. Bolaget likviderades på alla bolagsmäns begäran och formades sedan på nytt som Queenside AB."
         },
 
         {
           title: "Entré-och Informationsbiträde, Leksand Sommarland, Leksand juni-augusti 2009",
-          text: "Ansvarade för biljettförsäljning och information på plats och via telefon. Stort kassaansvar. "
         },
 
         {
           title: "Kioskbiträde, Leksand Sommarland, Leksand juni-augusti 2008",
-          text: "Arbetade med försäljning av glass, kaffe och godis samt underhåll slush-maskiner. Kassaansvar och mycket kundbemötande. "
         },
       ],
       "edu": [  
         {
-          title: "Nordic Business Institute, Göteborg - Webbkommunikatör YH 2013-2015",
-          text: "YH-utbildning inom webbkommunikation och sociala medier."
+          title: "Nordic Business Institute, Webbkommunikatör YH, 2013-2015",
+          text: "YH-utbildning inom webbkommunikation och sociala medier.",
+          courses: [
+            "Digitala affärer",
+            "Examensarbete",
+            "Företagsekonomi",
+            "Kommunikation",
+            "LIA 1",
+            "LIA 2",
+            "Marknadsföring",                     
+            "Praktiskt skrivande",
+            "Producera för digitala kanaler",                         
+            "Projektledning och entreprenörskap"
+          ]
         },
 
         {
-          title: "Popakademie Baden-Württemberg, Mannheim - Utbytesstudent 2012",
+          title: "Popakademie Baden-Württemberg, Utbytesstudent, 2012",
           text: "En av Tysklands främsta skolor inom musikindustri. Jag hade två olika projektarbeten, ett inom digital musikindustri och ett annat inom videoproduktion. Jag läste även tyska och hade 7 veckors praktik."
         },
 
         {
-          title: "Linnéuniversitetet, Hultsfred/Kalmar - Music & Event Management 2009-2012",
-          text: "Kandidatexamen i företagsekonomi med inriktning på music and event management. C-uppsats inom marknadsföring."
+          title: "Linnéuniversitetet, Music & Event Management, 2009-2012",
+          text: "Filosofie Kandidatexamen i företagsekonomi med inriktning mot music and event management. C-uppsats inom marknadsföring.",
+          courses: [
+            "Affärsutveckling och personligt entreprenörskap 7,5 hp",
+            "Företagsekononomi I - organisation och marknadsföring 15 hp",
+            "Företagsekonomi I - redovisning och kalkylering 15 hp",
+            "Företagsekonomi II - organisation 7,5 hp",
+            "Business Administration II - Business Relations, IMC & Brand Management 15hp",
+            "Företagsekonomi III - marknadsföring, inkl. examensarbete 30 hp",
+            "Music & Event Management - branschintroduktion 15hp",
+            "Music & Event Management II 15 hp",                     
+            "Music & Event Management III - branschrelaterad juridik 20 hp",
+            "Music & Event Management IV - självständigt arbete 10 hp",                         
+          ] 
         },
 
         {
@@ -94,7 +116,7 @@ angular.module('pellanApp')
       ]
     }
 
-    
+
 
   });
 

@@ -1,24 +1,38 @@
-h2 CV
+h2.top CV
 
 .cv-container
-  h3 Anställningar
-  ul
+  h3(ng-click="toggle1=!toggle1") 
+    i.fa(ng-class="{'fa-caret-right': toggle1, 'fa-caret-down': !toggle1}")
+    span Erfarenhet
+  ul.test(ng-hide="toggle1")
     li(ng-repeat="item in cv.exp")
-      h4(ng-click="toggle=!toggle") 
-        i.fa(ng-class="{'fa-caret-right': !toggle, 'fa-caret-down': toggle}")
+      h4(ng-click="toggle=!toggle")
+        span(ng-show="item.text")
+          i.fa(ng-class="{'fa-caret-right': !toggle, 'fa-caret-down': toggle}")
         span(ng-bind-html="item.title | strong")
-      div(ng-show="toggle") {{item.text}}
-  h3 Utbildning
-  ul
+      div(ng-show="toggle") 
+        span(ng-bind-html="item.text")
+
+  h3(ng-click="toggle2=!toggle2") 
+    i.fa(ng-class="{'fa-caret-right': !toggle2, 'fa-caret-down': toggle2}")
+    span Utbildning
+  ul(ng-show="toggle2")
     li(ng-repeat="item in cv.edu")
-      h4(ng-click="toggle=!toggle" ng-class="{'no-text': !item.text}")
+      h4(ng-click="toggle=!toggle" )
         span(ng-show="item.text")
           i.fa(ng-class="{'fa-caret-right': !toggle, 'fa-caret-down': toggle}")
         span(ng-bind-html="item.title | strong")
-      div(ng-show="toggle") {{item.text}}
+      div(ng-show="toggle")
+        span(ng-bind-html="item.text")
+        div(ng-if="item.courses")
+          h3 Kurser
+          ul
+            li(ng-repeat="course in item.courses") {{course}}
 
-  h3 Övrigt
-  ul
+  h3(ng-click="toggle3=!toggle3")
+    i.fa(ng-class="{'fa-caret-right': !toggle3, 'fa-caret-down': toggle3}")
+    span Övrigt
+  ul(ng-show="toggle3")
     li 
       div 
         p Jag har arbetat på många festivaler och musikevenemang, här är ett urplock:
@@ -30,4 +44,4 @@ h2 CV
       div(ng-show="toggle") {{item.text}}
     li 
       div 
-        p Vidare har jag varit sekreterare för Svenska Kyrkans ungdomskör i Djura församling och vice sekreterare för arrangörsgruppen Groupie i Hultsfred.
+      

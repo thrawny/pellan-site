@@ -28,13 +28,14 @@ module.exports = function(app) {
   app.use(cookieParser());
   
   if ('production' === env) {
-    app.use(favicon(path.join(config.root, 'dist', 'favicon.ico')));
-    app.use(express.static(path.join(config.root, 'dist')));
+    app.use(favicon(path.join(root, 'public', 'favicon.ico')));
+    app.use(express.static(path.join(root, 'dist')));
     app.set('appPath', root + '/dist');
     app.use(morgan('dev'));
   }
 
   if ('development' === env || 'test' === env) {
+    app.use(favicon(path.join(root, 'public', 'favicon.ico')));
     app.use(express.static(path.join(root, 'dist')));
     app.use(express.static(path.join(root, 'public')));
     app.set('appPath', root + '/dist');

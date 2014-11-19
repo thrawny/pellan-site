@@ -1,9 +1,10 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,700);
 @import url(http://fonts.googleapis.com/css?family=Parisienne|Petit+Formal+Script|Lobster|Julius+Sans+One|Love+Ya+Like+A+Sister);
-@import url(http://fonts.googleapis.com/css?family=Fredericka+the+Great|Satisfy|Abril+Fatface|Pinyon+Script|Playfair+Display+SC);
+@import url(http://fonts.googleapis.com/css?family=Fredericka+the+Great|Satisfy|Abril+Fatface|Pinyon+Script|Playfair+Display+SC|Source+Sans+Pro:200,300,400);
 @import "compass/css3/box-sizing";
 @import "compass/css3/flexbox";
 @import "compass/css3/border-radius";
+@import "compass/css3/box-shadow";
 $page-width: 1200px;
 $dark-pink: #62313c;
 * {
@@ -23,6 +24,8 @@ p a:hover, footer a:hover {
   color: $dark-pink;
 }
 
+
+
 body {
   @include display-flex;
   @include flex-direction(column);
@@ -31,7 +34,7 @@ body {
   padding-right: 3em;
   min-height: 100vh;
   font-family: 'Open Sans';
-  background-image: url(/pics/subtle_grunge.png);
+  background-image: url(/pics/keyboard.jpg);
   max-width: $page-width;
 
   header, footer, .container {
@@ -40,46 +43,87 @@ body {
 }
 .container {
   @include flex(1);
+  background-color: #fffcfc;
+  padding: 3em;
+  @include border-radius(8px);
+
+  .top {
+    margin-top: 0;
+  }
+  h2 {
+    text-transform: uppercase;
+  }
+}
+.home-page {
+  background: none;
 }
 .header {
   @include display-flex;
-  @include flex-flow(row);
   @include justify-content(space-between);
   padding-top: 3em;
   padding-bottom: 1.5em;
+
+  @media screen and (max-width: 769px) {
+    @include flex-flow(row wrap);
+    @include justify-content(space-around);
+    div.intern {
+      margin-top: 1em;
+    }
+
+  }
 }
 h1 {
-  font-family: Abril Fatface;
+  font-family: Source Sans Pro;
+  font-weight: 200;
   font-size: 3em;
   margin: 0;
+  text-transform: uppercase;
+  // text-shadow: 2px 2px 4px white;
+  a {
+    color: white;
+  }
 }
 h2 {
-  color: #62313c;
+  color: #9c4f60;
 }
 footer {
   @include display-flex;
-  @include justify-content(flex-end);
+  @include flex-flow(row wrap);
+  @include justify-content(space-between);
   padding-top: 1em;
   padding-bottom: 1em;
   margin: 0 auto;
   
-  font-size: 3em;
+  .copy {
+    @include align-self(center);
+  }
+
+  .social {
+    
+  }
+
   a {
+    font-size: 3em;
     margin: 0.15em;
+  }
+  @media screen and (max-width: 769px) {
+    @include justify-content(space-around);
   }
   
 }
-.main-nav {
+ul.main-nav {
   list-style: none;
+  padding: 0;
   li {
     display: inline;
     padding-right: 10px;
     text-transform: uppercase;
   }
+
 }
 
 .home-nav {
-  margin-top: 6em;
+  margin-top: 7em;
   ul {
     @include display-flex;
     @include flex-flow(row wrap);
@@ -87,16 +131,15 @@ footer {
     margin: 0;
     list-style: none;
   }
-  li {
-    transition: all 0.5s ease;
-  }
+  
   @media screen and (min-width: 769px) {
     ul {
       @include justify-content(space-between);
     }
     li {
       width: 20%;
-    }
+      transition: all 0.5s ease;
+    } 
     li:hover {
       width: 25%;
     }  
@@ -106,17 +149,23 @@ footer {
      @include justify-content(space-around); 
     }
     li {
-      width: 200px;
+      width: 20%;
+      min-width: 150px;
+      margin: 1em;
       
     }
-    li:hover {
-      width: 250px;
-    }  
+    margin-top: 0;
+
   }
   
 }
 .circle {
   @include border-radius(100%);
+  // @include box-shadow(1px 1px 5px 0px black);
+  // border: 1px solid;
+  font-family: Source Sans Pro;
+  font-weight: 300;
+  font-size: 1.2em;
   background-color: #c97286;
   text-align: center;
   display: block;
@@ -125,9 +174,10 @@ footer {
   padding: 50% 0;
   color: white;
   text-transform: uppercase;
+  line-height: 0;
 }
 .cv {
-  background-color: #62313c
+  background-color: #733a46;
 }
 .portfolio {
   background-color: #9c4f60;
@@ -143,7 +193,8 @@ footer {
     outline: none;
   }
   input {
-    width: 250px;
+    width: 30%;
+    min-width: 200px;
     margin: 0;
     appearance: none;
     box-shadow: none;
@@ -169,16 +220,19 @@ footer {
   }
   textarea {
     margin: 0;
-    appearance: none;
     box-shadow: none;
-    border-radius: none;
     padding: 0.5em;
     font-size: 1em;
     border: solid 1px #dcdcdc;
     transition: box-shadow 0.3s, border 0.3s;
 
     height: 150px;
-    width: 400px;
+    width: 100%;
+    min-width: 10em;
+  }
+  .contact-textarea {
+    width: 40%;
+    min-width: 208px;
   }
 
   div.response {
@@ -204,16 +258,17 @@ footer {
     margin-left: 2em;
     margin-bottom: 2em;
     @include border-radius(2%);
-    border: 1px solid;
+    //border: 1px solid;
   }
 }
 .cv-container {
   div.hidden {
     display: none;
   }
-  ul {
+  > ul {
     padding: 0;
     margin: 0;
+    padding-left: 1em;
     list-style: none;
 
     h4 {
@@ -232,6 +287,22 @@ footer {
     div {
       padding-left: 16px;
     }
+    
+  }
+  h3 {
+      cursor: pointer;
+      i {
+        color: $dark-pink;
+        width: 16px;
+        text-align: center;
+      }
+  }
+
+  a {
+    text-decoration: underline;
+  }
+  a:hover {
+    color: $dark-pink;
   }
 }
 
@@ -240,8 +311,18 @@ footer {
   @include display-flex;
   @include align-items(center);
   @include justify-content(center);
-  background-color: $dark-pink;
+  @include border-radius(10px);
   padding: 10px;
+  color: white; 
+  border: 2px solid; 
+}
+.intern:hover {
+  color: black;
+  background-color: white;
+  border: 2px solid transparent;
+}
 
-
+img.portf-pic {
+  width: 15%;
+  float: right;
 }
