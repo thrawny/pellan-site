@@ -83,9 +83,13 @@ body {
   padding-top: 3em;
   padding-bottom: 1.5em;
 
-  @media screen and (max-width: 769px) {
+  @media screen and (max-width: 768px) {
     @include flex-flow(row wrap);
     @include justify-content(space-around);
+    .intern {
+      margin-top: 1em;
+    }
+
   }
 }
 h1 {
@@ -122,7 +126,7 @@ footer {
     font-size: 3em;
     margin: 0.15em;
   }
-  @media screen and (max-width: 769px) {
+  @media screen and (max-width: 768px) {
     @include justify-content(space-around);
   }
   
