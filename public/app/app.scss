@@ -40,6 +40,26 @@ body {
   header, footer, .container {
     width: 100%;  
   }
+
+  @media screen and (max-width: 769px) {
+    padding-left: 0;
+    padding-right: 0;
+    header {
+      a {
+        color: white;
+      }
+    }
+    .container {
+      padding: 1em;
+      @include border-radius(0px);
+    }
+    footer {
+      background-color: #cda7a7;
+    }
+  }
+  p {
+    text-align: inherit
+  }
 }
 .container {
   @include flex(1);
