@@ -24,11 +24,15 @@ p a:hover, footer a:hover {
   color: $dark-pink;
 }
 
-
+.browsehappy {
+  background-color: tomato;
+}
 
 body {
   @include display-flex;
   @include flex-direction(column);
+  /* Your grandparents flexbox for old Webkit */
+  -webkit-box-orient: vertical; 
   margin: 0 auto;
   padding-left: 3em;
   padding-right: 3em;
@@ -62,7 +66,14 @@ body {
   }
 }
 .container {
-  @include flex(1);
+  /* Pepperidge Farm remembers. */
+  -webkit-box-flex: 1 0 auto;
+  /* IE10, ugh */
+  -ms-flex: 1 0 auto;
+  /* Unprefixed */
+  flex: 1 0 auto;
+  /* prefixed webkit syntax */
+  -webkit-flex: 1 0 auto;
   background-color: #fffcfc;
   padding: 3em;
   @include border-radius(8px);
@@ -278,6 +289,7 @@ ul.main-nav {
 .about-container {
   img {
     width: 30%;
+    min-width: 200px;
     float: right;
     margin-left: 2em;
     margin-bottom: 2em;
