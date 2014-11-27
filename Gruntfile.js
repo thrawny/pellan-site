@@ -9,7 +9,7 @@ module.exports = function(grunt) {
       jade: {
         files: ['public/**/*.jade'],
         tasks: ['jade']
-      }
+      },
     },
 
     concurrent: {
@@ -53,8 +53,12 @@ module.exports = function(grunt) {
           cssDir: 'dist/app'
         }
       }
+    },
+    autoprefixer: {
+        css: {
+            src: 'dist/app/app.css',
+        }
     }
-
   });
   
   require('load-grunt-tasks')(grunt);
