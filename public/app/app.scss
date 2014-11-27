@@ -7,6 +7,7 @@
 @import "compass/css3/box-shadow";
 $page-width: 1200px;
 $dark-pink: #62313c;
+//
 * {
   @include box-sizing(border-box);
 }
@@ -91,6 +92,9 @@ body {
 .header {
   @include display-flex;
   @include justify-content(space-between);
+  display: -ms-flexbox;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding-top: 3em;
   padding-bottom: 1.5em;
 
@@ -121,12 +125,18 @@ footer {
   @include display-flex;
   @include flex-flow(row wrap);
   @include justify-content(space-between);
+    display: -ms-flexbox;
+    -ms-flex-pack: justify;
+    -ms-flex-flow: row wrap;
+
   padding-top: 1em;
   padding-bottom: 1em;
   margin: 0 auto;
   
   .copy {
     @include align-self(center);
+    -ms-flex-item-align: center;
+
   }
 
   .social {
@@ -157,6 +167,9 @@ ul.main-nav {
   margin-top: 7em;
   ul {
     @include display-flex;
+
+    display: -ms-flexbox;
+ 
     
     padding: 0;
     margin: 0;
@@ -167,6 +180,9 @@ ul.main-nav {
     ul {
       @include justify-content(space-between);
       @include flex-flow(row wrap);
+        -ms-flex-pack: justify;
+        -ms-flex-flow: row wrap;
+
     }
     li {
       width: 20%;
@@ -176,6 +192,8 @@ ul.main-nav {
     ul {
      @include justify-content(space-around); 
      @include flex-flow(column wrap);
+        -ms-flex-pack: justify;
+        -ms-flex-flow: column wrap;
     }
     li {
       width: 20%;
@@ -348,6 +366,11 @@ ul.main-nav {
   @include align-items(center);
   @include justify-content(center);
   @include border-radius(10px);
+
+  display: -ms-flexbox;
+  -ms-flex-item-align: center;
+  -ms-flex-pack: center;
+
   padding: 10px;
   color: white; 
   border: 2px solid; 
