@@ -32,7 +32,7 @@
     <header role="banner" class="header">
       <h1> <a ui-sref="index">Sofia Pellgård</a></h1>
       <div ng-include="$state.current.name !== 'index' ? '/app/partials/_nav.html' : null"></div>
-      <div ng-if="$state.current.name === 'index'" ui-sref="intern" class="intern"><span>Praktikplats sökes för våren 2015!</span></div>
+      <div ng-if="false" ui-sref="intern" class="intern"><span>Praktikplats sökes för våren 2015!</span></div>
     </header>
     <div ng-class=" { 'home-page': $state.current.name === 'index'} " ui-view class="container"></div>
     <footer>
@@ -62,7 +62,7 @@
     <script src="app/portfolio/portfolio.controller.js"></script>
     <script src="app/about/about.js"></script>
     <script src="app/about/about.controller.js"></script>
-    <script src="app/intern/intern.js"></script>
+<!--     <script src="app/intern/intern.js"></script>
     <script src="app/intern/intern.controller.js"></script>
-  </body>
+ -->  </body>
 </html>
