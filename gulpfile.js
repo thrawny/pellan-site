@@ -113,7 +113,8 @@ gulp.task('build', ['clean', 'scripts', 'injectjs:build', 'jade', 'styles'], fun
     .pipe(gulp.dest('./dist/pics'))
   gulp.src('./public/favicon.ico')
     .pipe(gulp.dest('./dist'))
-
+  gulp.src('./public/robots.txt')
+    .pipe(gulp.dest('./dist'))
 });
 
 
