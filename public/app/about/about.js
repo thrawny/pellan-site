@@ -1,5 +1,3 @@
-'use strict';
-
 angular.module('pellanApp')
   .config(function ($stateProvider, $urlRouterProvider) {
     $stateProvider

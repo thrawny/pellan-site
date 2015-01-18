@@ -1,6 +1,4 @@
-'use strict';
-
 angular.module('pellanApp')
-  .controller('MainCtrl', function($scope, $state) {
+  .controller('MainCtrl', ['$scope', '$state', function($scope, $state) {
     $scope.$state = $state;
-  });
+  }]);

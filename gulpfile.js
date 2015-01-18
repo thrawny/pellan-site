@@ -11,6 +11,7 @@ var gulp = require('gulp'),
     concat = require('gulp-concat'),
     notify = require('gulp-notify'),
     nodemon = require('gulp-nodemon')
+    ngAnnotate = require('gulp-ng-annotate');
     // livereload = require('gulp-livereload')
     // injectReload = require('gulp-inject-reload')
 
@@ -23,6 +24,14 @@ gulp.task('injectjs', function () {
   return target.pipe(inject(sources, { ignorePath: 'public', addRootSlash: false }))
     .pipe(gulp.dest('./public'));
 });
+
+gulp.task('injectjs:build', ['scripts'], function() {
+  var target = gulp.src('./public/index.html');
+  var sources = gulp.src(['./dist/app/app.min.js'], {read: false});
+  return target
+    .pipe(inject(sources, {ignorePath: 'dist', addRootSlash: false }))
+    .pipe(gulp.dest('./dist'));
+})
 
 // gulp.task('injectreload', function(){
 //   return gulp.src('./public/index.html')
@@ -47,10 +56,10 @@ gulp.task('styles', function() {
     .pipe(sass({ style: 'expanded', "sourcemap=none": true }))
     .on('error', function (err) { console.log(err.message); })
     .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
-    .pipe(gulp.dest('./dist'))
+    // .pipe(gulp.dest('./dist'))
     .pipe(rename({suffix: '.min'}))
     .pipe(minifycss())
-    .pipe(gulp.dest('./dist'))
+    .pipe(gulp.dest('./dist/app'))
     // .pipe(notify({ message: 'Styles task complete' }));
 });
 
@@ -59,9 +68,11 @@ gulp.task('scripts', function() {
     .pipe(jshint())
     .pipe(jshint.reporter('default'))
     .pipe(concat('app.js'))
+    .pipe(ngAnnotate())
+    .pipe(gulp.dest('./dist/app'))
     .pipe(rename({suffix: '.min'}))
     .pipe(uglify())
-    .pipe(gulp.dest('./dist'))
+    .pipe(gulp.dest('./dist/app'))
     // .pipe(notify({ message: 'Scripts task complete' }));
 });
 
@@ -76,7 +87,12 @@ gulp.task('nodemon', function () {
     .on('restart', function () {
       console.log('restarted!')
     })
-})
+});
+
+gulp.task('watch', function() {
+  gulp.watch('./public/app/*.scss', ['styles']);
+  gulp.watch('./public/app/**/*.jade', ['jade']);
+});
 
 gulp.task('default', ['clean', 'injectjs', 'jade', 'styles', 'nodemon'], function() {
   // watch .scss files
@@ -92,9 +108,13 @@ gulp.task('default', ['clean', 'injectjs', 'jade', 'styles', 'nodemon'], functio
 
 });
 
-gulp.task('watch', function() {
-  gulp.watch('./public/app/*.scss', ['styles']);
-  gulp.watch('./public/app/**/*.jade', ['jade']);
+gulp.task('build', ['clean', 'scripts', 'injectjs:build', 'jade', 'styles'], function() {
+  gulp.src('./public/pics/**/*')
+    .pipe(gulp.dest('./dist/pics'))
+  gulp.src('./public/favicon.ico')
+    .pipe(gulp.dest('./dist'))
+
 });
+
 
 

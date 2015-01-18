@@ -1,11 +1,9 @@
-'use strict';
-
 angular.module('pellanApp')
   .controller('ContactCtrl', function($scope, $http) {
     $scope.contact = {};
     $scope.submitted = false;
     $scope.submitStatus = "";
-    $scope.response;
+    // $scope.response;
 
     $scope.submit = function(form) {
       $scope.submitted = true;
@@ -27,6 +25,6 @@ angular.module('pellanApp')
         $scope.submitStatus = "invalid";
         $scope.response = "Ett eller flera fält är inte ifyllda korrekt.";
       }
-    }
+    };
 
   });

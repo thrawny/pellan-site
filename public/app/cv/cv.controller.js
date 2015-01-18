@@ -1,5 +1,3 @@
-'use strict';
-
 angular.module('pellanApp')
   .controller('CvCtrl', function($scope, $http) {
     $scope.cv = {
@@ -114,7 +112,7 @@ angular.module('pellanApp')
         },
 
       ]
-    }
+    };
 
 
 
