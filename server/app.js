@@ -16,9 +16,10 @@ var server = require('http').createServer(app);
 require('./express')(app);
 require('./routes')(app);
 
+var port = process.argv[2] || 3000;
 // Start server
-server.listen(3000, undefined, function () {
-  console.log('Express server listening on %d, in %s mode', 3000, app.get('env'));
+server.listen(port, undefined, function () {
+  console.log('Express server listening on %d, in %s mode', port, app.get('env'));
 });
 
 // Expose app
