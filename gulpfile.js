@@ -25,6 +25,7 @@ gulp.task('injectjs', function () {
     .pipe(gulp.dest('./public'));
 });
 
+
 gulp.task('injectjs:build', ['scripts'], function() {
   var target = gulp.src('./public/index.html');
   var sources = gulp.src(['./dist/app/app.min.js'], {read: false});
@@ -60,19 +61,19 @@ gulp.task('styles', function() {
     .pipe(rename({suffix: '.min'}))
     .pipe(minifycss())
     .pipe(gulp.dest('./dist/app'))
-    // .pipe(notify({ message: 'Styles task complete' }));
+  // .pipe(notify({ message: 'Styles task complete' }));
 });
 
-gulp.task('scripts', function() {
-  return gulp.src('./public/app/**/*.js')
-    .pipe(jshint())
-    .pipe(jshint.reporter('default'))
-    .pipe(concat('app.js'))
-    .pipe(ngAnnotate())
-    .pipe(gulp.dest('./dist/app'))
-    .pipe(rename({suffix: '.min'}))
-    .pipe(uglify())
-    .pipe(gulp.dest('./dist/app'))
+  gulp.task('scripts', function() {
+    return gulp.src('./public/app/**/*.js')
+      .pipe(jshint())
+      .pipe(jshint.reporter('default'))
+      .pipe(concat('app.js'))
+      .pipe(ngAnnotate())
+      .pipe(gulp.dest('./dist/app'))
+      .pipe(rename({suffix: '.min'}))
+      .pipe(uglify())
+      .pipe(gulp.dest('./dist/app'))
     // .pipe(notify({ message: 'Scripts task complete' }));
 });
 

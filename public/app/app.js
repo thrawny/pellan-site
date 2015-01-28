@@ -1,7 +1,9 @@
 angular.module('pellanApp', [
   'ui.router',
   'ngSanitize',
-  'ngAnimate'
+  'ngAnimate',
+  'angulartics',
+  'angulartics.google.analytics'
 ])
   .config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
     $urlRouterProvider

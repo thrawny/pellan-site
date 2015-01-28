@@ -13,10 +13,12 @@ var express = require('express');
 // Setup server
 var app = express();
 var server = require('http').createServer(app);
+var port = process.argv[2] || 3000;
+
 require('./express')(app);
 require('./routes')(app);
 
-var port = process.argv[2] || 3000;
+
 // Start server
 server.listen(port, undefined, function () {
   console.log('Express server listening on %d, in %s mode', port, app.get('env'));
