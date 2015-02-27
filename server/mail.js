@@ -17,7 +17,7 @@ module.exports = function(req, res, next) {
     });
     transporter.sendMail({
         from: req.body.email,
-        to: 'jonaslergell@gmail.com',
+        to: 'pellan.web@gmail.com',
         subject: 'contact form sofiapellgard.se',
         text: req.body.email + '\n' + req.body.message
     }, function(err, info) {
