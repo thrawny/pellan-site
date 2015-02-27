@@ -3,13 +3,18 @@ angular.module('pellanApp')
     $scope.cv = {
       "exp": [
         { 
-          title: "Receptionist, Högskolan Väst, Trollhättan juli 2014 - nuvarande",
-          text: "Receptionist och växeltelefonist på Högskolan Väst. Publicerar och skapar även innehåll på högskolans webbplats, främst intranätet och de sidor som rör Campus Support. Anställning via Academic Work. "
+          title: "Praktikant, DirektOnline - DO Sverige AB, februari 2015 - nuvarande",
+          text: "Jag arbetar med webbcopy, redigering av content via CMS-verktyget Bliss Webbstudio, SEO/SEM m.m. Andra och sista praktikperioden på YH-utbildningen 'Webbkommunikatör'."
         },
 
         {
           title: "Skribent, Rockfoto.nu, maj 2013 - nuvarande",
           text: "Skriver musikrelaterade recensioner, artiklar och intervjuer som publiceras för Rockfotos nätmagasin. Här finner ni några av mina texter: <a href='http://rockfoto.nu/about/sofia-pellgard' target='_blank'>rockfoto.nu</a>"
+        },
+
+        { 
+          title: "Receptionist, Högskolan Väst, Trollhättan juli 2014 - februari 2015",
+          text: "Receptionist och växeltelefonist på Högskolan Väst. Publicerade och skapade även innehåll på högskolans olika webbplatser, främst intranätet och de sidor som var länkade till Campus Support. Publicering via CMS-verktyget Dynamaster. Anställning via Academic Work. "
         },
 
         {
