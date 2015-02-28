@@ -1,5 +1,6 @@
 var nodemailer = require('nodemailer');
 var password = require('./config').password;
+var email = require('./config').email;
 
 module.exports = function(req, res, next) {
 
@@ -11,13 +12,13 @@ module.exports = function(req, res, next) {
     var transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
-          user: 'pellan.web@gmail.com',
+          user: email,
           pass: password
       }
     });
     transporter.sendMail({
         from: req.body.email,
-        to: 'pellan.web@gmail.com',
+        to: email,
         subject: 'contact form sofiapellgard.se',
         text: req.body.email + '\n' + req.body.message
     }, function(err, info) {
