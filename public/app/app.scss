@@ -28,7 +28,7 @@ body {
   display: flex;
   flex-direction: column;
   /* Your grandparents flexbox for old Webkit */
-  -webkit-box-orient: vertical; 
+  -webkit-box-orient: vertical;
   margin: 0 auto;
   padding-left: 3em;
   padding-right: 3em;
@@ -38,7 +38,7 @@ body {
   max-width: $page-width;
 
   header, footer, .container {
-    width: 100%;  
+    width: 100%;
   }
 
   @media screen and (max-width: 769px) {
@@ -106,7 +106,7 @@ body {
   color: white;
   font-weight: normal;
   font-style: normal;
-  font-size: 1em; 
+  font-size: 1em;
 }
 h1 {
   font-family: Source Sans Pro;
@@ -134,7 +134,7 @@ footer {
   padding-top: 1em;
   padding-bottom: 1em;
   margin: 0 auto;
-  
+
   .copy {
     align-self: center;
     -ms-flex-item-align: center;
@@ -142,7 +142,7 @@ footer {
   }
 
   .social {
-    
+
   }
 
   a {
@@ -152,7 +152,7 @@ footer {
   @media screen and (max-width: 768px) {
     justify-content: space-around;
   }
-  
+
 }
 ul.main-nav {
   list-style: none;
@@ -171,13 +171,13 @@ ul.main-nav {
     display: flex;
 
     display: -ms-flexbox;
- 
-    
+
+
     padding: 0;
     margin: 0;
     list-style: none;
   }
-  
+
   @media screen and (min-width: 769px) {
     ul {
       justify-content: space-between;
@@ -188,11 +188,11 @@ ul.main-nav {
     }
     li {
       width: 20%;
-    }   
+    }
   }
   @media screen and (max-width: 768px) {
     ul {
-    justify-content: space-around; 
+    justify-content: space-around;
     flex-flow: column wrap;
         -ms-flex-pack: justify;
         -ms-flex-flow: column wrap;
@@ -203,12 +203,12 @@ ul.main-nav {
       margin-left: auto;
       margin-right: auto;
       margin-bottom: 1em;
-      
+
     }
     margin-top: 0;
 
   }
-  
+
 }
 .circle {
   border-radius: 100%;
@@ -241,7 +241,7 @@ ul.main-nav {
   background-color: #c97286
 }
 .contact {
-  background-color: #cda7a7 
+  background-color: #cda7a7
 }
 .contact-form {
   input, textarea {
@@ -300,7 +300,7 @@ ul.main-nav {
   div.response.invalid {
       color: tomato;
   }
-  
+
   > div {
     margin-bottom: 1em;
   }
@@ -343,7 +343,7 @@ ul.main-nav {
     div {
       padding-left: 16px;
     }
-    
+
   }
   h3 {
       cursor: pointer;
@@ -374,8 +374,8 @@ ul.main-nav {
   -ms-flex-pack: center;
 
   padding: 10px;
-  color: white; 
-  border: 2px solid; 
+  color: white;
+  border: 2px solid;
 }
 .intern:hover {
   color: black;
