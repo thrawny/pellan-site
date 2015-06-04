@@ -2,19 +2,17 @@ angular.module('pellanApp')
   .controller('CvCtrl', function($scope, $http) {
     $scope.cv = {
       "exp": [
-        { 
-          title: "Praktikant, DirektOnline - DO Sverige AB, februari 2015 - nuvarande",
-          text: "Jag arbetar med webbcopy, redigering av content via CMS-verktyget Bliss Webbstudio, SEO/SEM m.m. Andra och sista praktikperioden på YH-utbildningen 'Webbkommunikatör'."
-        },
-
         {
-          title: "Skribent, Rockfoto.nu, maj 2013 - nuvarande",
-          text: "Skriver musikrelaterade recensioner, artiklar och intervjuer som publiceras för Rockfotos nätmagasin. Här finner ni några av mina texter: <a href='http://rockfoto.nu/about/sofia-pellgard' target='_blank'>rockfoto.nu</a>"
+          title: "Skribent, HYMN, maj 2013 - nuvarande",
+          text: "Skriver musikrelaterade recensioner, artiklar och intervjuer som publiceras för musikmagasinet HYMN. Magasinet hette tidigare Rockfoto Magasin. Här finner ni några av mina texter: <a href='http://hymn.se/author/sofia-pellgard/' target='_blank'>HYMN.se</a>"
         },
-
         { 
-          title: "Receptionist, Högskolan Väst, Trollhättan juli 2014 - februari 2015",
-          text: "Receptionist och växeltelefonist på Högskolan Väst. Publicerade och skapade även innehåll på högskolans olika webbplatser, främst intranätet och de sidor som var länkade till Campus Support. Publicering via CMS-verktyget Dynamaster. Anställning via Academic Work. "
+          title: "Praktikant: Web Content, DirektOnline, Göteborg, februari 2015-juni 2015",
+          text: "Jag arbetade med webbcopy, redigering av content via CMS-verktyget Bliss Webbstudio och SEO/SEM. Jag gjorde även en användarmanual till byråns CMS. Andra och sista praktikperioden på YH-utbildningen 'Webbkommunikatör'."
+        },
+        { 
+          title: "Receptionist, Högskolan Väst, Trollhättan juli 2014-februari 2015",
+          text: "Receptionist och växeltelefonist på Högskolan Väst. Publicerade och skapade även innehåll på högskolans olika webbplatser, främst intranätet och de sidor som var länkade till Campus Support. Publicering via CMS-verktyget Dynamaster. Fick även i uppdrag att skapa grafiskt kommunikationsmaterial så som broschyrer och kort. Anställning via Academic Work. "
         },
 
         {
