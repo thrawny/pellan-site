@@ -60,7 +60,7 @@ angular.module('pellanApp')
       "edu": [
         {
           title: "Nordic Business Institute, Webbkommunikatör YH, 2013-2015",
-          text: “Kvalificerad yrkeshögskoleexamen inriktning Webbkommunikatör”,
+          text: "Kvalificerad yrkeshögskoleexamen inriktning Webbkommunikatör",
           courses: [
             "Digitala affärer",
             "Examensarbete",
