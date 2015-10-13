@@ -8,7 +8,7 @@ angular.module('pellanApp')
         },
         {
           title: "Webbredaktör, Citat AB (Sitrus Agency), Göteborg, juni-september 2015",
-          text: "Webbredaktör på reklambyrån Citat som numera går under namnet Sitrus Agency. Jag arbetade främst för en internationell kund inom banksektorn med flera varumärken. Jag underhöll och förvaltade ett tiotal webbplatser på olika språk och även ett av varumärkenas Facebook. Uppdraget bestod bland annat av att koordinera, strukturera och publicera innehåll och bearbeta bildmaterial. Arbetet krävde mycket självständigt driv, problemlösning och löpande dialog med byråns produktionsledare och kunden. Anställningen var under sommaren och via Academic Work."
+          text: "Webbredaktör på reklambyrån Citat som numera går under namnet Sitrus Agency. Jag arbetade främst för en internationell kund inom banksektorn med flera varumärken. Jag underhöll och förvaltade ett tjugotal webbplatser på olika språk och även ett av varumärkenas Facebook. Uppdraget bestod bland annat av att koordinera, strukturera och publicera innehåll och bearbeta bildmaterial. Arbetet krävde mycket självständigt driv, problemlösning och löpande dialog med byråns produktionsledare och kunden. Anställningen var under sommaren och via Academic Work."
         },
         {
           title: "Praktikant: Web Content, DirektOnline, Göteborg, februari-juni 2015",
@@ -60,7 +60,7 @@ angular.module('pellanApp')
       "edu": [
         {
           title: "Nordic Business Institute, Webbkommunikatör YH, 2013-2015",
-          text: "YH-utbildning inom webbkommunikation och sociala medier.",
+          text: “Kvalificerad yrkeshögskoleexamen inriktning Webbkommunikatör”,
           courses: [
             "Digitala affärer",
             "Examensarbete",
